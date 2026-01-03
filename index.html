@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت تشخیص خودرگی‌ خودرو</title>
+    <link href="Main.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="header">
+                <div id="logo">
+                    <img class="logo" src="/src/image/Car2.png">
+                </div>
+                <div class="Content">
+
+                    <span class="content">سامانه استعلام خوردگی خودرو</span>
+
+
+                </div>
+
+                <div id="menuToggle">
+
+                    <input type="checkbox" id="menuCheckbox" />
+
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+
+                        <li>
+                            <a href="#">
+                                <label for="menuCheckbox" onclick="this.parentNode.click();">صفحه ای اصلی</label>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://mahdioder.github.io/Myprofile.github.io/" target="_blank">درباره ما</a>
+                        </li>
+
+                        <!-- These just close the menu -->
+                        <li><label for="menuCheckbox"><a>اطلاعات</a></label></li>
+                        <li><label for="menuCheckbox"><a>وبلاگ</a></label></li>
+
+                        <!-- Or just use regular URLs -->
+                        <li>
+                            <a href="https://mahdioder.github.io/Myprofile.github.io/" target="_blank">تماس با ما</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+    <main>
+        <section id="Main-Section" dir="rtl">
+            <div class="Main">
+                <div class="content-Main-1">
+                    <span>شماره پلاک:</span>
+                    <input class="input-1" type="text" required id="id-car" placeholder="11ح222">
+                </div>
+                <div class="content-Main-2">
+                    <span>ایران:</span>
+                    <input class="input-2" type="text" placeholder="88">
+                </div>
+                <div class="content-Main-3">
+                    <span>رنگ خودرو:</span>
+                    <input class="input-3" type="text" placeholder="سفید">
+                </div>
+                <div class="content-Main-3">
+                    <span>شماره شاسی(Vin):</span>
+                    <input class="input-4" type="text" placeholder="N60HBAGTLR43576">
+                </div>
+                <div class="content-Main-5">
+                    <span>شماره موتور:</span>
+                    <input class="input-5" type="text" placeholder="S60HBAGTLR4357">
+                </div>
+                <div class="content-Main-6">
+                    <span>مدل خودرو:</span>
+                    <input class="input-6" type="number" value="1400">
+                </div>
+
+                <!-- Upload file -->
+                <form class="dropzone-box" id="dropzone-box" onclick="dropzonebox()">
+                    <h2> لطفا عکس ماشین رو اپلود کنید </h2>
+                    <p>Click to upload or drag and drop</p>
+
+                    <!-- 
+                        <div class="file-upload-icon">
+                             svg icon 
+                        </div>-->
+                    <div class="dropzone-area">
+
+                        <input type="file" required id="upload-file" name="uploaded-file" accept="image/*"
+                            onclick="Hidenpargraf()">
+
+                        <p id="file-info">No Image Selected</p>
+                        <img id="previews" />
+                    </div>
+
+                    <div class="dropzone-description">
+                        <span>Supported formats: JPEG, JPG, PNG, ...</span>
+                        <span>Max file size: 25MB</span>
+                    </div>
+
+                    <div class="dropzone-actions">
+                        <div class="dropzone-help">
+                            <!-- help svg --> Help Center
+                        </div>
+
+                        <div class="action-buttons">
+                            <button type="reset" onclick="HidenButoon()">
+                                انصراف
+                            </button>
+                            <!-- type="button" -->
+                            <button id="btn" type="button" onclick="showButoon()">
+                                ذخیره
+                            </button>
+                            <button id="perview" type="reset" onclick="openNewAdsBox(),analyze()">
+                                نتیجه کارشناسی
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+
+            </div>
+
+
+
+        </section>
+
+        <section id="add-ads-holder">
+            <div id="add-ads-box">
+                <div>
+
+                    <div class="close-Mark">
+                        <img id="img-close" src="Close-btn.jpg" onclick="closeNewAdsbox()">
+                        <span class="Result-title">نتیجه کارشناسی</span>
+                    </div>
+                    <div class="Result">
+                        <div class="content-Result" dir="rtl">
+                            <div class="content-Result-text">
+                                <span class="Blocks">1- کاپوت دچاره فرو رفتگی شده.</span>
+                                <span class="Blocks">2-شاسی عقب دچاره شکستگی شده.</span>
+                                <span class="Blocks">3-درب جلو سمت شاگرد دارایه خط و خش هست.</span>
+                                <span class="Blocks">4-صندق عقب دچاره فرو رفتگی از داخل شد و باید تعویض گردد.</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="Main.js"></script>
+</body>
+
+</html>
